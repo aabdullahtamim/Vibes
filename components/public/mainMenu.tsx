@@ -14,15 +14,15 @@ function PublicMainMenu() {
                         <Logo />
                     </Link>
                     <ProductSearchForm />
-                    <div className="">
-                        <div className="flex gap-x-12">
+                    <div >
+                        <div className="flex gap-x-16">
                             <Link className="flex flex-col justify-center items-center" href={"/"}>
                                 <GitCompareArrows size={22} />
-                                <span className="text-xs">Compare</span>
+                                <span className="text-xs mt-2">Compare</span>
                             </Link>
                             <Link className="flex flex-col justify-center items-center" href={"/"}>
                                 <Heart size={22} />
-                                <span className="text-xs">Favorite</span>
+                                <span className="text-xs mt-2">Favorite</span>
                             </Link>
                             <ProductCart />
                         </div>
