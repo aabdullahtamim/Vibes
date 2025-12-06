@@ -53,19 +53,19 @@ function ProductSearchForm() {
 
 
     return (
-        <div className='px-6 flex-1 mx-5'>
+        <div className='px-6 flex-1 '>
             <div className='relative'>
                 <input value={text} onChange={(e) => setText(e.target.value)} className='border w-full p-2' type="text" placeholder="Search your products......." title="Search products" />
                 <button className='absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer hover:text-primary' title='search'>
-                    <Search />
+                    <Search className='opacity-60' />
                 </button>
 
                 {text &&
 
-                    <div className='absolute top-full left-0 w-full   border flex flex-col justify-between'>
+                    <div className='absolute top-full left-0 w-full z-1 bg-white border flex flex-col justify-between'>
 
                         <div className='p-4 h-90 overflow-y-scroll'>
-                            {searchData.length == 0 && <div className='text-center text-primary py-5'>No data Found</div>}
+                            {searchData.length == 0 && <div className='text-center text-primary py-10'>No data Found</div>}
                             {searchData.map(item => (
                                 <div className='flex mb-4 pb-4 border-b' key={item.id}>
                                     <div className='w-24'>
