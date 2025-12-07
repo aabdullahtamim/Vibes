@@ -1,4 +1,5 @@
 import PublicMainMenu from "@/components/public/mainMenu";
+import Navbar from "@/components/public/navbar";
 import { MapPin } from "lucide-react";
 import Link from "next/link";
 
@@ -20,6 +21,7 @@ function PublicHeader() {
                 </div>
             </div>
             <PublicMainMenu />
+            <Navbar />
         </>
     )
 }

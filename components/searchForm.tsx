@@ -62,7 +62,7 @@ function ProductSearchForm() {
 
                 {text &&
 
-                    <div className='absolute top-full left-0 w-full z-1 bg-white border flex flex-col justify-between'>
+                    <div className='absolute top-full left-0 w-full z-2 bg-white border flex flex-col justify-between'>
 
                         <div className='p-4 h-90 overflow-y-scroll'>
                             {searchData.length == 0 && <div className='text-center text-primary py-10'>No data Found</div>}
