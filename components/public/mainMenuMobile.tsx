@@ -2,6 +2,7 @@
 
 import ProductCart from "@/components/productCart";
 import ProductSearchForm from "@/components/searchForm";
+import { useNavigationStore } from "@/store/navigation.store";
 import { Menu, Search, X } from "lucide-react";
 import { useState } from "react";
 
@@ -9,11 +10,12 @@ import { useState } from "react";
 function MainMenuMobile() {
 
     const [active, setActive] = useState(false);
+    const { isActive, updateActive } = useNavigationStore();
 
     return (
         <div className="flex justify-end gap-x-5 ">
             <Search onClick={() => setActive(true)} className="hover:text-primary cursor-pointer" />
-            <Menu className="hover:text-primary cursor-pointer" />
+            <Menu onClick={() => updateActive(!isActive)} className="hover:text-primary cursor-pointer" />
             <ProductCart />
 
             {active &&
